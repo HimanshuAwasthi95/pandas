@@ -1241,7 +1241,6 @@ cdef class _Period(object):
         >>> p = pd.Period("2018-03-11", freq='H')
         >>> p.day
         11
-
         """
 
         base, mult = get_freq_code(self.freq)

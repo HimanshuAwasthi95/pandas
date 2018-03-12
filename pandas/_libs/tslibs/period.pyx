@@ -1222,7 +1222,7 @@ cdef class _Period(object):
 
         This attribute returns the total number of days of given month on which
         the particular date occurs.
-        
+
         Returns
         -------
         Int
@@ -1301,6 +1301,32 @@ cdef class _Period(object):
 
     @property
     def daysinmonth(self):
+        """
+        Return total number of days of the month in given Period.
+
+        This attribute returns the total number of days of given month
+
+        Returns
+        -------
+        Int
+        Number of days with in month
+
+        See also
+        --------
+        Period.dayofweek
+            Return the day of the week
+
+        Period.dayofyear
+            Return the day of the year
+
+        Examples
+        --------
+        >>> import pandas as pd
+        >>> p = pd.Period("2018-03-11", freq='H')
+        >>> p.daysinmonth
+        31
+        """
+
         return self.days_in_month
 
     @property
